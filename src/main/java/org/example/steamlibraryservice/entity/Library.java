@@ -8,8 +8,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.time.LocalDateTime;
 import java.util.List;
 
-@Getter
-@Setter
 @Document(collection = "libraries")
 public class Library {
     @Id
@@ -37,4 +35,37 @@ public class Library {
     }
 
     public Library() {}
+
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
+
+    public List<String> getGameIds() {
+        return gameIds;
+    }
+
+    public void setGameIds(List<String> gameIds) {
+        this.gameIds = gameIds;
+    }
+
+    public LocalDateTime getLastUpdated() {
+        return lastUpdated;
+    }
+
+    public void setLastUpdated(LocalDateTime lastUpdated) {
+        this.lastUpdated = lastUpdated;
+    }
 }
